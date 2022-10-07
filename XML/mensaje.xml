@@ -1,0 +1,56 @@
+
+<!--( la declaracion xml es una instruccion de procesamiento , que posee 2 atributos ( version ) y ( encoding ) )-->
+
+<? xml version = ("1.0") enconding = ("UTF-8") standalone = ("yes") ?>
+
+<!--( la declaracion xml-stylesheet tambien es una instruccion de procesamiento , que posee 2 atributos ( type ) y ( href ) )-->
+
+<? xml-stylesehet type = ("text/css") href = ("direcciondocumnetocss") ?>
+
+<!DOCTYPE body[
+    
+    <!ENTITY peligro "Warning : something bad happened... please refresh and try again."> <!--( Referencias de identidad ( ENTITY ) )-->
+
+    <!ENTITY alerta "Alerta : posible fallo de segmentación de la memoria.">
+
+]>
+
+<informacioncontacto> <!--( esto es una etiqueta madre )-->
+
+    <nombre> mark </nombre>
+
+    <apellidos> zukerberg </apellidos> <!--( esta es una subetiqueta de la etiqueta madre )-->
+
+    <telefono> (+1) 995234324 </telefono>
+
+    <paisresidencia> (USA) estados unidos </paisresidencia>
+
+    <mensaje> &#65; </mensaje> <!--( las referencias de caracteres identificadores un caracter unicode en formato hexadecimal )-->
+
+    <mensaje> &peligro; </mensjae> <!--( referencias de identidad )-->
+
+    <mensaje> &alerta; </mensaje> <!--( referencias de identidad )-->
+
+    <atributos atributo1 atributo2 > esta etiqueta contiene 2 atributos </atributos>
+
+</informacioncontacto>
+
+<!--
+
+    standalone ( si ) : esto nos indica que no hay declaraciones externas necesarias para analizar este documento.
+
+    standalone hace referencia a si el documento xml se basa en la información procedente de alguna una fuente externa , como una ( DTD ) externa.
+
+    ( DTD ) definicion de tipo de documento.
+
+-->
+
+
+
+<!--
+    
+    otra cosa importante a destacar de la declaracion xml , es que el orden en el cual se posicional los atributos es importante.
+
+    el orden correcto : version , encoding , standalone.
+
+-->
